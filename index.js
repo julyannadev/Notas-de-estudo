@@ -16,8 +16,53 @@ const num2= Number(req.query.num2)
 
 res.send({message: num1 + num2})
 })
+//http://localhost:3000/api/somar?num1=4&num2=2  // RESULTADO
+
+
+
+
+
+//exercicio2
+
+app.get("/api/salario/:valor/:hora", (req,res) => {
+const ValorGanho = Number(req.params.valor)
+const HorasTrabalhadas = Number(req.params.hora)
+
+const resultado = ValorGanho * HorasTrabalhadas
+
+res.send({ resultado })
+
+})
+
+//http://localhost:3000/api/salario/20/40 = RESULTADO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 app.listen(3000, () => {
     console.log("Server rodando na porta 3000 -> https://localhost:3000")
 })
+
+
+
+
